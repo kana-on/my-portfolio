@@ -364,7 +364,7 @@ header .navi .menu__text a {
   background-repeat: no-repeat;
   background-position: center center;
   width: 100%;
-  height: 600px;
+  height: 790px;
   margin: 0;
   position: relative;
   z-index: 0;
@@ -376,13 +376,23 @@ header .navi .menu__text a {
   }
 }
 
-.top h1 {
+.top::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
   background-color: rgba(238, 242, 247, 0.4);
+}
+
+.top h1 {
   margin: 0;
-  padding-top: 270px;
-  padding-bottom: 225px;
   text-align: center;
   font-size: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 @media screen and (max-width: 500px) {
