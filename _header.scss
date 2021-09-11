@@ -1,0 +1,210 @@
+@keyframes load {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		display: none;
+		z-index: -1;
+	}
+}
+@keyframes roop {
+	0% {
+		transform: translateX(-300px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}
+
+.loading {
+	background-color: gray;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 4;
+	animation: load 2.6s ease 2s;
+	animation-fill-mode: forwards;
+	.buttely {
+		width: 300px;
+		height: 100px;
+		position: absolute;
+		top: 50%;
+		left: 40%;
+		border-radius: 10px;
+		background-color: #ffffff;
+		box-shadow: 0 0 13 black inset;
+		overflow: hidden;
+		animation: load 2.6s ease 2s;
+		@media screen and (max-width: 500px) {
+			top: 40%;
+			left: 13%;
+		}
+		&::before {
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			width: 300px;
+			height: 100px;
+			content: "";
+			display: block;
+			background: repeating-linear-gradient(
+				-45deg,
+				yellow,
+				yellow 5px,
+				blue 5px,
+				blue 10px
+			);
+			animation: roop 1.5s ease;
+		}
+	}
+}
+
+header {
+	.inmenu {
+		#open {
+			display: none;
+			&:checked ~ * .line {
+				animation: rotate1 1s ease;
+				animation-fill-mode: forwards;
+				@keyframes rotate1 {
+					0% {
+						transform: rotate(0deg) translateY(0);
+					}
+					100% {
+						transform: translateY(11px) rotate(45deg);
+					}
+				}
+			}
+			&:checked ~ * .line::after {
+				animation: rotate2 1s ease;
+				animation-fill-mode: forwards;
+				@keyframes rotate2 {
+					0% {
+						transform: rotate(0deg);
+						opacity: 1;
+					}
+					100% {
+						transform: rotate(360deg);
+						opacity: 0;
+					}
+				}
+			}
+			&:checked ~ * .line::before {
+				animation: totate3 1s ease;
+				animation-fill-mode: forwards;
+				@keyframes totate3 {
+					0% {
+						transform: translate(0) rotate(0deg);
+					}
+					100% {
+						transform: translateY(-22px) rotate(90deg);
+					}
+				}
+			}
+			&:checked ~ .navi {
+				animation: back 1s ease;
+				animation-fill-mode: forwards;
+				@keyframes back {
+					0% {
+						bottom: 100%;
+						left: 100%;
+					}
+					100% {
+						bottom: 0;
+						left: 0;
+					}
+				}
+			}
+			&:not(:checked) ~ *.navi {
+				animation: fade 1s ease;
+				@keyframes fade {
+					0% {
+						bottom: 0;
+						left: 0;
+					}
+					100% {
+						bottom: 100%;
+						left: 100%;
+					}
+				}
+			}
+		}
+		.menu-btn {
+			background-color: rgb(150, 150, 150);
+			position: relative;
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			display: block;
+			position: fixed;
+			z-index: 2;
+			top: 20px;
+			right: 20px;
+			@media screen and (max-width: 500px) {
+				top: 20px;
+				right: 9%;
+			}
+			.line {
+				content: "";
+				position: absolute;
+				top: 18px;
+				right: 14px;
+				display: block;
+				height: 3px;
+				width: 30px;
+				background-color: #ffffff;
+				&::before {
+					top: 22px;
+					position: absolute;
+					content: "";
+					display: block;
+					height: 3px;
+					width: 30px;
+					background-color: #ffffff;
+				}
+				&::after {
+					top: 11px;
+					position: absolute;
+					content: "";
+					display: block;
+					height: 3px;
+					width: 30px;
+					background-color: #ffffff;
+				}
+			}
+		}
+	}
+	.navi {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		z-index: 1;
+		background-color: rgb(139, 216, 139);
+		bottom: 100%;
+		left: 100%;
+		transition: 0.5;
+		.menu {
+			text-align: center;
+			margin: 150px auto;
+			@media screen and (max-width: 500px) {
+				text-align: right;
+				padding-right: 25px;
+			}
+			&__text {
+				font-size: 65px;
+				margin-top: 40px;
+				@media screen and (max-width: 500px) {
+					font-size: 55px;
+				}
+				a {
+					color: rgb(40, 126, 138);
+				}
+			}
+		}
+	}
+}

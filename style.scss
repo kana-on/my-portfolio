@@ -1,0 +1,23 @@
+h1,
+h2 {
+	font-family: "Nothing You Could Do";
+}
+body {
+	margin: 0 auto;
+	max-width: 1400px;
+	@media screen and (max-width:500px) {
+		max-width: 400px;
+	}
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+@import "header";
+@import "body";
+@import "button";
+@import "workspage";
+@import "introductionpage";

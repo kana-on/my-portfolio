@@ -1,0 +1,128 @@
+$title: rgb(228, 255, 164);
+@mixin subtitle {
+	font-size: 35px;
+	padding: 20px;
+	padding-left: 60px;
+	margin: 0;
+	background-color: $title;
+}
+@mixin btnposition {
+	position: absolute;
+	right: 5%;
+	bottom: 10%;
+	@media screen and (max-width: 500px) {
+		left: 5%;
+	}
+}
+@mixin textarea {
+	width: 430px;
+	padding: 10px;
+	margin-top: 50px;
+	margin-left: 30px;
+	background-color: rgba(175, 175, 175, 0.7);
+	@media screen and (max-width: 500px) {
+		width: 250px;
+	}
+}
+.top {
+	background-image: url("./images/20191110_163751.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 100%;
+	height: 600px;
+	margin: 0;
+	position: relative;
+	z-index: 0;
+	@media screen and (max-width: 500px) {
+		background-size: cover;
+	}
+	h1 {
+		background-color: rgba(238, 242, 247, 0.4);
+		margin: 0;
+		padding-top: 270px;
+		padding-bottom: 225px;
+		text-align: center;
+		font-size: 80px;
+		@media screen and (max-width: 500px) {
+			width: 100%;
+			max-width: 100%;
+			margin: 0 auto;
+			font-size: 60px;
+		}
+	}
+}
+
+.introduction {
+	position: relative;
+	width: 100%;
+	height: 600px;
+	background-image: url(./images/20200412_160835.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	h2 {
+		@include subtitle();
+	}
+	.name {
+		text-align: center;
+		font-size: 50px;
+		letter-spacing: 5px;
+		padding-top: 35px;
+		@media screen and (max-width: 500px) {
+			font-size: 30px;
+			padding-top: 10px;
+		}
+	}
+	p {
+		font-size: 18px;
+		letter-spacing: 2px;
+		padding: 1px;
+		@media screen and (max-width: 500px) {
+			font-size: 20px;
+		}
+	}
+	&__text {
+		@include textarea();
+		@media screen and (max-width: 500px) {
+			height: 255px;
+		}
+	}
+	&__btn {
+		@include btnposition();
+	}
+}
+
+.works {
+	position: relative;
+	width: 100%;
+	height: 600px;
+	background-image: url(./images/20200621_163219.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	h2 {
+		@include subtitle();
+	}
+	&__text {
+		@include textarea();
+		position: absolute;
+		margin-top: 0;
+		top: 35%;
+		right: 5%;
+		p {
+			font-size: 18px;
+			letter-spacing: 2px;
+			padding: 1px;
+		}
+	}
+	&__btn {
+		@include btnposition();
+		bottom: 8%;
+		p {
+			font-size: 30px !important;
+			line-height: 1;
+			padding-left: 55px !important;
+		}
+	}
+}
