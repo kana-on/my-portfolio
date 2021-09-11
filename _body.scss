@@ -30,20 +30,31 @@ $title: rgb(228, 255, 164);
 	background-repeat: no-repeat;
 	background-position: center center;
 	width: 100%;
-	height: 600px;
+	height: 790px;
 	margin: 0;
 	position: relative;
 	z-index: 0;
 	@media screen and (max-width: 500px) {
 		background-size: cover;
 	}
-	h1 {
+	&::before{
+		content: "";
+		display: block;
+		width: 100%;
+		height: 100%;
 		background-color: rgba(238, 242, 247, 0.4);
+	}
+	h1 {
+		// background-color: rgba(238, 242, 247, 0.4);
 		margin: 0;
-		padding-top: 270px;
-		padding-bottom: 225px;
+		// padding-top: 270px;
+		// padding-bottom: 225px;
 		text-align: center;
 		font-size: 80px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50% ,-50%);
 		@media screen and (max-width: 500px) {
 			width: 100%;
 			max-width: 100%;
