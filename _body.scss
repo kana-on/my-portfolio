@@ -1,4 +1,4 @@
-$title: rgb(228, 255, 164);
+$title: rgb(255, 223, 164);
 @mixin subtitle {
 	font-size: 35px;
 	padding: 20px;
@@ -24,6 +24,9 @@ $title: rgb(228, 255, 164);
 		width: 250px;
 	}
 }
+html {
+	background-color: rgb(255, 239, 219);
+}
 .top {
 	background-image: url("./images/20191110_163751.jpg");
 	background-size: cover;
@@ -37,7 +40,7 @@ $title: rgb(228, 255, 164);
 	@media screen and (max-width: 500px) {
 		background-size: cover;
 	}
-	&::before{
+	&::before {
 		content: "";
 		display: block;
 		width: 100%;
@@ -54,7 +57,7 @@ $title: rgb(228, 255, 164);
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		transform: translate(-50% ,-50%);
+		transform: translate(-50%, -50%);
 		@media screen and (max-width: 500px) {
 			width: 100%;
 			max-width: 100%;

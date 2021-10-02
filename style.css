@@ -324,7 +324,7 @@ header .navi {
   height: 100%;
   position: fixed;
   z-index: 1;
-  background-color: #8bd88b;
+  background-color: #d8aa8b;
   bottom: 100%;
   left: 100%;
   -webkit-transition: 0.5;
@@ -355,7 +355,11 @@ header .navi .menu__text {
 }
 
 header .navi .menu__text a {
-  color: #287e8a;
+  color: #8a5428;
+}
+
+html {
+  background-color: #ffefdb;
 }
 
 .top {
@@ -419,7 +423,7 @@ header .navi .menu__text a {
   padding: 20px;
   padding-left: 60px;
   margin: 0;
-  background-color: #e4ffa4;
+  background-color: #ffdfa4;
 }
 
 .introduction .name {
@@ -495,7 +499,7 @@ header .navi .menu__text a {
   padding: 20px;
   padding-left: 60px;
   margin: 0;
-  background-color: #e4ffa4;
+  background-color: #ffdfa4;
 }
 
 .works__text {
@@ -568,7 +572,7 @@ header .navi .menu__text a {
 }
 
 .works-body {
-  background-color: rgba(181, 255, 243, 0.89);
+  background-color: rgba(255, 235, 181, 0.89);
 }
 
 .works-h1 {
@@ -634,7 +638,7 @@ header .navi .menu__text a {
 }
 
 .introduction-body {
-  background-color: rgba(64, 210, 255, 0.877);
+  background-color: rgba(255, 179, 64, 0.877);
 }
 
 .introduction__h1 {
